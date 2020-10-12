@@ -9,7 +9,6 @@ const server: FastifyInstance<
 
 // Add our route handler with correct types
 server.get('/', {}, (request, reply) => {
-  console.log(request);
   reply.code(200).send({ 'Hello': 'World!' });
 });
 
