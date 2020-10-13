@@ -1,0 +1,13 @@
+{
+  "name": "@try-fastify/lint-test",
+  "version": "0.0.1",
+  "description": "Linting tests",
+  "devDependencies": {
+    "@try-fastify/eslint-config": "^0.0.1"
+  },
+  "scripts": {
+    "lint": "eslint --ext ts,tsx src",
+    "lint:fix": "eslint --ext ts,tsx src --fix"
+  }
+}
+

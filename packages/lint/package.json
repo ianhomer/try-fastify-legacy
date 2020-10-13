@@ -1,7 +1,0 @@
-{
-  "name": "@try-fastify/lint",
-  "version": "0.0.1",
-  "description": "Linting",
-  "main": "index.js"
-}
-
