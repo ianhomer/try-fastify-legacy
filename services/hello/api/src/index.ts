@@ -1,18 +1,7 @@
-import fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
-import { Server, IncomingMessage, ServerResponse } from 'http';
-
-const server: FastifyInstance<
-  Server,
-  IncomingMessage,
-  ServerResponse
-> = fastify();
-
-// Add our route handler with correct types
-server.get('/', {}, (request, reply) => {
-  reply.code(200).send({ 'Hello': 'World!' });
-});
+import { create } from './web/server';
 
 // Start your server
+const server = create();
 server.listen(3000, (err, address) => {
   if (err) {
     console.error(err);
