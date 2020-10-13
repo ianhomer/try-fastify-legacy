@@ -6,8 +6,8 @@
     "@try-fastify/eslint-config": "^0.0.1"
   },
   "scripts": {
-    "lint": "eslint --ext ts,tsx src",
-    "lint:fix": "eslint --ext ts,tsx src --fix"
+    "lint": "npx eslint --ext ts,tsx src",
+    "lint:fix": "npx eslint --ext ts,tsx src --fix"
   }
 }
 

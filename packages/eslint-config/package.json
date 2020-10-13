@@ -2,9 +2,6 @@
   "name": "@try-fastify/eslint-config",
   "version": "0.0.1",
   "description": "Linting configuration",
-  "main": "index.js",
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.4.1"
-  }
+  "main": "index.js"
 }
 
