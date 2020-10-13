@@ -1,4 +1,4 @@
-import fastify, { FastifyInstance, RouteShorthandOptions } from 'fastify';
+import fastify, { FastifyInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
 
 export function create(): FastifyInstance {
@@ -14,4 +14,4 @@ export function create(): FastifyInstance {
   });
   
   return server;
-};
+}

@@ -7,12 +7,14 @@
   },
   "scripts": {
     "audit": "lerna exec npm audit",
+    "build:watch": "lerna run build:watch",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean --yes",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
     "start": "run-s bootstrap start:lerna",
     "start:lerna": "lerna run start --parallel",
     "test": "lerna run test",
-    "build:watch": "lerna run build:watch",
     "update": "npx npm-check-updates -u && npx lerna exec -- npx npm-check-updates -u && lerna clean --yes && lerna bootstrap --no-ci -- --package-lock-only --no-audit"
   },
   "dependencies": {
