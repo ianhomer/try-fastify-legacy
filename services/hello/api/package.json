@@ -16,6 +16,7 @@
     "fastify-cli": "^2.3.0"
   },
   "devDependencies": {
-    "@try-fastify/eslint-config": "^0.0.1"
+    "@try-fastify/eslint-config": "^0.0.1",
+    "@try-fastify/prettier-config": "^0.0.1"
   }
 }
