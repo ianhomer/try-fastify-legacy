@@ -1,5 +1,3 @@
 module.exports = {
-  extends: [
-    "@try-fastify"
-  ]
+  extends: ["@try-fastify"],
 };
