@@ -6,10 +6,10 @@
     "build:watch": "lerna run build:watch",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean --yes",
-    "fix": "run-s lint:fix prettier:fix",
-    "fix:check": "run-s -s lint prettier",
-    "lint": "lerna run lint",
-    "lint:fix": "lerna run lint:fix",
+    "lint": "run-s -s lint prettier",
+    "lint:fix": "run-s lint:fix prettier:fix",
+    "eslint": "lerna run lint",
+    "eslint:fix": "lerna run lint:fix",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
     "start": "run-s bootstrap start:lerna",
@@ -35,7 +35,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run fix:check"
+      "pre-push": "npm run lint"
     }
   }
 }
