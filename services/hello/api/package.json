@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "@try-fastify/hello-api",
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
