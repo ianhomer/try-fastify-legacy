@@ -13,6 +13,6 @@ module.exports = {
     "prettier",
   ],
   env: {
-    node: true
-  }
+    node: true,
+  },
 };

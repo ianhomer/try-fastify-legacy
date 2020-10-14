@@ -6,6 +6,7 @@
     "build:watch": "lerna run build:watch",
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean --yes",
+    "fix": "run-s lint:fix prettier:fix",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
     "prettier": "npx prettier --check .",
