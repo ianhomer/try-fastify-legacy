@@ -7,7 +7,7 @@
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "fix": "run-s lint:fix prettier:fix",
-    "fix:check": "run-s lint prettier",
+    "fix:check": "run-s -s lint prettier",
     "lint": "lerna run lint",
     "lint:fix": "lerna run lint:fix",
     "prettier": "npx prettier --check .",

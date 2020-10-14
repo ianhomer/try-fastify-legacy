@@ -2,7 +2,7 @@ import fastify, { FastifyInstance } from "fastify";
 import { Server, IncomingMessage, ServerResponse } from "http";
 
 export function create(): FastifyInstance {
-      const server: FastifyInstance<
+  const server: FastifyInstance<
     Server,
     IncomingMessage,
     ServerResponse
