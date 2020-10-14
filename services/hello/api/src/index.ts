@@ -1,6 +1,6 @@
 import { create } from "./web/server";
 
-// Start your server
+// Start server
 const server = create();
 server.listen(3000, (err, address) => {
   if (err) {
