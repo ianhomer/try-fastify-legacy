@@ -10,6 +10,13 @@ npm run bootstrap
 npm start
 ```
 
+## With Docker
+
+```sh
+docker-compose down
+docker-compose up -d --build
+```
+
 ## Day-to-day
 
 Add dependency to all APIs.

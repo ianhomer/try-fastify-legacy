@@ -5,6 +5,7 @@
     "audit": "lerna exec npm audit",
     "build:watch": "lerna run build:watch",
     "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
     "clean": "lerna clean --yes",
     "lint": "run-s -s eslint prettier",
     "lint:fix": "run-s eslint:fix prettier:fix",
