@@ -1,0 +1,9 @@
+{
+  "name": "@try-fastify/tsconfig",
+  "version": "0.0.1",
+  "description": "Shared TypeScript",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ]
+}

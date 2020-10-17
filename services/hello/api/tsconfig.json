@@ -1,17 +1,12 @@
 {
+  "extends": "@try-fastify/tsconfig",
   "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "preserveConstEnums": true,
-    "outDir": "dist",
-    "sourceMap": true
+    "outDir": "dist"
   },
   "include": [
-    "src/**/*"
+    "./src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "./node_modules"
   ]
 }
