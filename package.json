@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@try-fastify/mono",
   "version": "0.0.1",
   "scripts": {
     "audit": "lerna exec npm audit",
