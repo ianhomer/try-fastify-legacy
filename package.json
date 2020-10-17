@@ -13,6 +13,7 @@
     "eslint:fix": "lerna run lint:fix",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
+    "show:tsconfig": "lerna run show:tsconfig",
     "start": "run-s bootstrap start:lerna",
     "start:lerna": "lerna run start --parallel",
     "test": "lerna run test",
