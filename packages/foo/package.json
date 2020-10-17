@@ -1,4 +1,12 @@
 {
   "name": "@try-fastify/foo",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@try-fastify/eslint-config": "^0.0.1",
+    "@try-fastify/prettier-config": "^0.0.1",
+    "@try-fastify/tsconfig": "^0.0.1"
+  }
 }
