@@ -1,1 +1,1 @@
-export const hello = (): string => "Hello, World!";
+export * from "./hello.ts";
