@@ -1,6 +1,6 @@
 import fastify, { FastifyInstance } from "fastify";
 import { Server, IncomingMessage, ServerResponse } from "http";
-import hello from "./hello";
+import helloHandler from "./helloHandler";
 
 export function create(): FastifyInstance {
   const server: FastifyInstance<
@@ -10,7 +10,7 @@ export function create(): FastifyInstance {
   > = fastify();
 
   // Add our route handler with correct types
-  server.get("/", {}, hello);
+  server.get("/", {}, helloHandler);
 
   return server;
 }
