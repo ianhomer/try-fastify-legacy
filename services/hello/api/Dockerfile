@@ -4,13 +4,14 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 
-COPY services/hello/api/docker-cmd.sh ./docker-cmd.sh
+COPY services/hello/api/dist/  ./services/primary/dist
 
-COPY services/hello/api/dist/  ./dist
+RUN npm install --production
+RUN npm run bootstrap:production
 
 USER node
 
 EXPOSE 3000
 
-CMD ./docker-cmd.sh
+CMD ["node", "services/primary/dist/index"]
 

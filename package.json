@@ -5,6 +5,7 @@
     "audit": "lerna exec npm audit",
     "build:watch": "lerna run build:watch",
     "bootstrap": "lerna bootstrap",
+    "bootstrap:production": "lerna bootstrap -- --production --no-optional",
     "build": "lerna run build",
     "clean": "rimraf packages/*/dist services/*/*/dist",
     "lint": "run-s -s eslint prettier",
@@ -14,8 +15,10 @@
     "eslint:fix": "lerna run lint:fix",
     "prettier": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
+    "prune:production": "lerna exec -- npm prune --production --no-package-lock",
     "show:tsconfig": "lerna run show:tsconfig",
     "start": "lerna run start --parallel",
+    "serve": "lerna run serve --parallel",
     "test": "lerna run test",
     "update": "npx npm-check-updates -u && npx lerna exec -- npx npm-check-updates -u && lerna clean --yes && lerna bootstrap --no-ci -- --package-lock-only --no-audit"
   },

@@ -9,6 +9,7 @@
     "lint:fix": "npx eslint src --ext .ts --fix",
     "show:tsconfig": "tsc --showConfig",
     "start": "ts-node-dev src/index",
+    "serve": "node dist/index",
     "test": "jest"
   },
   "author": "",
