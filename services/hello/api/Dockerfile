@@ -1,5 +1,7 @@
 FROM node:14.13.1-alpine3.10
 
+# TODO : Use ARG, ENV, HEALTHCHECK, builder pattern
+
 WORKDIR /usr/src/app
 
 # Docker layers in order of least changing first
@@ -8,17 +10,28 @@ WORKDIR /usr/src/app
 RUN npm install -g lerna
 
 # Install mono repo
-COPY package.json .
-RUN npm install --production
+COPY package*.json ./
+RUN npm ci --production
 
 # Bootstrap service
-COPY services/hello/api/dist/  ./services/primary/dist
+COPY lerna.json .
+COPY packages/foo/package*.json ./packages/foo/
+COPY packages/foo/dist/ ./packages/foo/dist
+
+COPY services/hello/api/package*.json ./services/primary/api/
+COPY services/hello/api/dist/  ./services/primary/api/dist
 
 RUN npm run bootstrap:production
 
-USER node
+#RUN chown -R node:node packages && \
+#    chown -R node:node services
+
+#USER node
 
 EXPOSE 3000
 
-CMD ["node", "services/primary/dist/index"]
+# Uncomment to leave docker container running
+# CMD tail -f /dev/null
+
+CMD ["node", "services/primary/api/dist/index"]
 
