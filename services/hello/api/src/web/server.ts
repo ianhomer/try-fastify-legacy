@@ -1,5 +1,6 @@
 import fastify, { FastifyInstance } from "fastify";
 import { Server, IncomingMessage, ServerResponse } from "http";
+import { hello } from "@try-fastify/foo";
 
 export function create(): FastifyInstance {
   const server: FastifyInstance<
@@ -10,7 +11,7 @@ export function create(): FastifyInstance {
 
   // Add our route handler with correct types
   server.get("/", {}, (request, reply) => {
-    reply.code(200).send({ Hello: "World!" });
+    reply.code(200).send({ message: hello() });
   });
 
   return server;
