@@ -26,9 +26,3 @@ Add dependency to all APIs.
 ```sh
 npx lerna add middie --scope=api
 ```
-
-Add dev dependency to all APIs.
-
-```sh
-npx lerna add eslint --scope=api --dev
-```
