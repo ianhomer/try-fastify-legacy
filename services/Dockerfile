@@ -1,11 +1,7 @@
 FROM node:14.13.1-alpine3.10 AS builder
 ARG service
 
-# TODO : Use ENV
-
 WORKDIR /usr/src/app
-
-# Docker layers in order of least changing first
 
 # Install global lerna to help with bootstrapping
 RUN npm install -g lerna
@@ -15,11 +11,10 @@ COPY package*.json ./
 RUN npm ci --production
 
 # Bootstrap service
+RUN echo "Service : ${service}"
 COPY lerna.json .
 COPY packages/foo/package*.json ./packages/foo/
 COPY packages/foo/dist/ ./packages/foo/dist
-
-RUN echo "Service : ${service}"
 
 COPY services/${service}/api/package*.json ./services/primary/api/
 COPY services/${service}/api/dist/  ./services/primary/api/dist
