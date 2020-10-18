@@ -1,4 +1,4 @@
-FROM node:14.13.1-alpine3.10
+FROM node:14.13.1-alpine3.10 AS builder
 ARG service
 
 # TODO : Use ENV, HEALTHCHECK, builder pattern
@@ -26,6 +26,14 @@ COPY services/${service}/api/dist/  ./services/primary/api/dist
 
 RUN npm run bootstrap:production \
   --scope "*/${service}" --include-dependencies
+
+# Create runtime image
+
+FROM node:14.13.1-alpine3.10
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/packages/ ./packages
+COPY --from=builder /usr/src/app/services/ ./services
 
 #RUN chown -R node:node packages && \
 #    chown -R node:node services
