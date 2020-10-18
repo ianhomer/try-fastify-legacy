@@ -1,7 +1,7 @@
 FROM node:14.13.1-alpine3.10 AS builder
 ARG service
 
-# TODO : Use ENV, HEALTHCHECK, builder pattern
+# TODO : Use ENV
 
 WORKDIR /usr/src/app
 
@@ -42,8 +42,8 @@ USER node
 
 EXPOSE 3000
 
-# Uncomment to leave docker container running
-# CMD tail -f /dev/null
+HEALTHCHECK --timeout=5s --interval=15s \
+  CMD wget http://localhost:3000/health -O /dev/null
 
 CMD ["node", "services/primary/api/dist/index"]
 

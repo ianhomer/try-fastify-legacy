@@ -15,9 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@try-fastify/foo": "^0.0.1",
     "fastify": "^3.6.0",
     "fastify-cli": "^2.3.0",
-    "@try-fastify/foo": "^0.0.1"
+    "fastify-healthcheck": "^3.0.0"
   },
   "devDependencies": {
     "@try-fastify/eslint-config": "^0.0.1",

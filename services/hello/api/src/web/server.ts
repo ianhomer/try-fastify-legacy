@@ -9,6 +9,8 @@ export function create(): FastifyInstance {
     ServerResponse
   > = fastify();
 
+  server.register(require("fastify-healthcheck"));
+
   // Add our route handler with correct types
   server.get("/", {}, helloHandler);
 
