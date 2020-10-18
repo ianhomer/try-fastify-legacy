@@ -1,5 +1,7 @@
 import { create } from "./web/server";
-require("dotenv").config({ path: require("find-config")(".env") });
+import { config } from "dotenv";
+import * as findConfig from "find-config";
+config({ path: findConfig(".env") });
 
 // Start your server
 const server = create();
