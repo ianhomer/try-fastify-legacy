@@ -1,4 +1,11 @@
 {
-  "packages": ["packages/**", "services/*/*"],
-  "version": "3.22.1"
+  "ignoreChanges": [
+    "**/*.md"
+  ],
+  "loglevel": "success",
+  "packages": [
+    "packages/**",
+    "services/*/*"
+  ],
+  "version": "independent"
 }
