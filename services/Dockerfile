@@ -35,10 +35,10 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/packages/ ./packages
 COPY --from=builder /usr/src/app/services/ ./services
 
-#RUN chown -R node:node packages && \
-#    chown -R node:node services
+RUN chown -R node:node packages && \
+    chown -R node:node services
 
-#USER node
+USER node
 
 EXPOSE 3000
 
