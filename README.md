@@ -8,6 +8,7 @@ Try fastify.
 npm install
 npm run bootstrap
 npm start
+http http://localhost:3000
 ```
 
 ## With Docker
@@ -15,6 +16,7 @@ npm start
 ```sh
 docker-compose down
 docker-compose up -d --build
+http http://localhost:3000
 ```
 
 ## Day-to-day

@@ -3,7 +3,9 @@ services:
   try-fastify-hellp-api:
     build:
       context: .
-      dockerfile: ./services/hello/api/Dockerfile
+      dockerfile: ./services/Dockerfile
+      args:
+        service: "hello"
     container_name: try-fastify-hello-api
     ports:
       - "3000:3000"

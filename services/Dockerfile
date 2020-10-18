@@ -1,6 +1,7 @@
 FROM node:14.13.1-alpine3.10
+ARG service
 
-# TODO : Use ARG, ENV, HEALTHCHECK, builder pattern
+# TODO : Use ENV, HEALTHCHECK, builder pattern
 
 WORKDIR /usr/src/app
 
@@ -18,10 +19,13 @@ COPY lerna.json .
 COPY packages/foo/package*.json ./packages/foo/
 COPY packages/foo/dist/ ./packages/foo/dist
 
-COPY services/hello/api/package*.json ./services/primary/api/
-COPY services/hello/api/dist/  ./services/primary/api/dist
+RUN echo "Service : ${service}"
 
-RUN npm run bootstrap:production
+COPY services/${service}/api/package*.json ./services/primary/api/
+COPY services/${service}/api/dist/  ./services/primary/api/dist
+
+RUN npm run bootstrap:production \
+  --scope "*/${service}" --include-dependencies
 
 #RUN chown -R node:node packages && \
 #    chown -R node:node services
