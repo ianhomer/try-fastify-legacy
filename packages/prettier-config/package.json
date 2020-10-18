@@ -2,8 +2,5 @@
   "name": "@try-fastify/prettier-config",
   "version": "0.0.1",
   "description": "Prettier configuration",
-  "main": "index.js",
-  "devDependencies": {
-    "@try-fastify/eslint-config": "^0.0.1"
-  }
+  "main": "index.js"
 }

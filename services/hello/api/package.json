@@ -21,10 +21,5 @@
     "fastify-cli": "^2.3.0",
     "fastify-healthcheck": "^3.0.0",
     "find-config": "^1.0.0"
-  },
-  "devDependencies": {
-    "@try-fastify/eslint-config": "^0.0.1",
-    "@try-fastify/prettier-config": "^0.0.1",
-    "@try-fastify/tsconfig": "^0.0.1"
   }
 }
