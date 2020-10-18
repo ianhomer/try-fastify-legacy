@@ -7,4 +7,3 @@
     "lint:fix": "npx eslint --ext ts,tsx src --fix"
   }
 }
-
