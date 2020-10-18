@@ -10,7 +10,7 @@
     "clean": "rimraf packages/*/dist services/*/*/dist",
     "lint": "run-s -s eslint prettier",
     "lint:fix": "run-s eslint:fix prettier:fix",
-    "lock:fix": "lerna run --parallel lock:fix",
+    "lock:fix": "lerna exec -- npm install",
     "nuke": "run-s nuke:locks nuke:modules",
     "nuke:modules": "rimraf node_modules **/node_modules",
     "nuke:locks": "rimraf package-lock.json **/package-lock.json",
