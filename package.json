@@ -10,6 +10,7 @@
     "clean": "rimraf packages/*/dist services/*/*/dist",
     "lint": "run-s -s eslint prettier",
     "lint:fix": "run-s eslint:fix prettier:fix",
+    "lock:fix": "lerna run --parallel lock:fix",
     "nuke": "run-s nuke:locks nuke:modules",
     "nuke:modules": "rimraf node_modules **/node_modules",
     "nuke:locks": "rimraf package-lock.json **/package-lock.json",
@@ -28,6 +29,9 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
+    "@try-fastify/eslint-config": "file:packages/eslint-config",
+    "@try-fastify/prettier-config": "file:packages/prettier-config",
+    "@try-fastify/tsconfig": "file:packages/tsconfig",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "babel-jest": "^26.5.2",
@@ -54,5 +58,10 @@
   },
   "lint-staged": {
     "*.{js,ts}": "prettier --write"
+  },
+  "dependencies": {
+    "@try-fastify/foo": "file:packages/foo",
+    "@try-fastify/hello-api": "file:services/hello/api",
+    "@try-fastify/lint-test": "file:packages/lint-test"
   }
 }
