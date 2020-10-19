@@ -1,5 +1,6 @@
 FROM node:14.13.1-alpine3.10 AS builder
 ARG service
+ENV CI=true
 
 WORKDIR /usr/src/app
 
