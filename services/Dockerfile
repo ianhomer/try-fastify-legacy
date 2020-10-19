@@ -41,5 +41,5 @@ EXPOSE 3000
 HEALTHCHECK --timeout=5s --interval=15s \
   CMD wget http://localhost:3000/health -O /dev/null
 
-CMD ["node", "services/primary/api/dist/index"]
+CMD ["node", "--preserve-symlinks", "services/primary/api/dist/index"]
 

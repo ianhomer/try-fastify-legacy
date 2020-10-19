@@ -11,7 +11,7 @@
     "docker:up": "npm run build && docker-compose up --build",
     "lint": "run-s -s eslint prettier",
     "lint:fix": "run-s eslint:fix prettier:fix",
-    "lock:fix": "lerna exec -- npm install",
+    "lock:fix": "lerna exec -- npm install --package-lock-only",
     "nuke": "run-s clean nuke:locks nuke:modules",
     "nuke:modules": "rimraf node_modules **/node_modules",
     "nuke:locks": "rimraf package-lock.json **/package-lock.json",
