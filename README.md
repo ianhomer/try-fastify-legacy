@@ -14,8 +14,7 @@ http http://localhost:3000
 ## With Docker
 
 ```sh
-npm run build
-docker-compose up --build
+npm run docker:up
 http http://localhost:3000
 ```
 

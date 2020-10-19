@@ -8,6 +8,7 @@
     "bootstrap:production": "lerna bootstrap -- --production --no-optional",
     "build": "lerna run build",
     "clean": "rimraf packages/*/dist services/*/*/dist",
+    "docker:up": "npm run build && docker-compose up --build", 
     "lint": "run-s -s eslint prettier",
     "lint:fix": "run-s eslint:fix prettier:fix",
     "lock:fix": "lerna exec -- npm install",
