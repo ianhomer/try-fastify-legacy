@@ -53,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run eslint:fix",
+      "pre-push": "npm run eslint",
       "pre-commit": "lint-staged --quiet"
     }
   },
