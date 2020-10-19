@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const isNumber = require("is-number");
+const isEven = require("is-even");
 
-export const peer = (x): boolean => isNumber(x);
+// isNumber is a peer dependency and the dependent needs to explicitly
+// add as a dependency.
+export const peer = (x): boolean => isEven(x);
