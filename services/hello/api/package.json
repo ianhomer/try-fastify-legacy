@@ -20,7 +20,6 @@
     "fastify": "^3.6.0",
     "fastify-cli": "^2.4.0",
     "fastify-healthcheck": "^3.0.0",
-    "find-config": "^1.0.0",
-    "is-number": "^7.0.0"
+    "find-config": "^1.0.0"
   }
 }
