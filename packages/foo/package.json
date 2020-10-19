@@ -10,5 +10,8 @@
     "@try-fastify/eslint-config": "^0.0.1",
     "@try-fastify/prettier-config": "^0.0.1",
     "@try-fastify/tsconfig": "^0.0.1"
+  },
+  "dependencies": {
+    "is-number": "^7.0.0"
   }
 }
