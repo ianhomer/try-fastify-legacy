@@ -17,8 +17,8 @@
   "dependencies": {
     "@try-fastify/foo": "^0.0.1",
     "dotenv": "^8.2.0",
-    "fastify": "^3.9.1",
-    "fastify-cli": "^2.5.1",
+    "fastify": "^3.9.2",
+    "fastify-cli": "^2.6.0",
     "fastify-healthcheck": "^3.0.0",
     "find-config": "^1.0.0",
     "is-even": "^1.0.0"
