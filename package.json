@@ -33,13 +33,13 @@
     "@try-fastify/eslint-config": "file:packages/eslint-config",
     "@try-fastify/prettier-config": "file:packages/prettier-config",
     "@try-fastify/tsconfig": "file:packages/tsconfig",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.29.2",
-    "babel-jest": "^27.0.6",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "babel-jest": "^27.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "husky": "^7.0.1",
-    "jest": "^27.0.6",
+    "husky": "^7.0.2",
+    "jest": "^27.1.0",
     "lerna": "^4.0.0",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
@@ -49,7 +49,7 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.2.1",
     "ts-node-dev": "^1.1.8",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   },
   "husky": {
     "hooks": {
