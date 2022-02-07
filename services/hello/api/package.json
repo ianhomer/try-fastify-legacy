@@ -16,8 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "@try-fastify/foo": "^0.0.1",
-    "dotenv": "^14.3.2",
-    "fastify": "^3.27.0",
+    "dotenv": "^16.0.0",
+    "fastify": "^3.27.1",
     "fastify-cli": "^2.15.0",
     "fastify-healthcheck": "^3.1.0",
     "find-config": "^1.0.0",
